@@ -89,6 +89,27 @@ class HuffmanSuite {
     println(createCodeTree(leaflist_order))
   }
 
+  @Test def `decode_test`: Unit = {
+// t11      t12              t13
+//                           abd
+//                          /   \
+//           ab           ab     d
+//          /  \         /  \
+//  a      a    b       a    b
+    val t11 = Leaf('a',2)
+    val t12 = Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5)
+    val t13 = Fork(Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5), Leaf('d',4), List('a','b','d'), 9)
+    println(decode(t11, List()))        // a
+    println(decode(t12, List(0)))       // a
+    println(decode(t12, List(1)))       // b
+    println(decode(t12, List()))        // a, b
+    println(decode(t13, List(0, 0)))    // a
+    println(decode(t13, List(0, 1)))    // b
+    println(decode(t13, List(1)))       // d
+    println(decode(t13, List(0)))       // a, b
+    println(decode(t13, List()))        // a, b, d
+  }
+
   @Test def `decode and encode a very short text should be identity (10pts)`: Unit =
     new TestTrees {
       assertEquals("ab".toList, decode(t1, encode(t1)("ab".toList)))

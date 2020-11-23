@@ -139,7 +139,20 @@ trait Huffman extends HuffmanInterface {
    * This function decodes the bit sequence `bits` using the code tree `tree` and returns
    * the resulting list of characters.
    */
-  def decode(tree: CodeTree, bits: List[Bit]): List[Char] = ???
+  def decode(tree: CodeTree, bits: List[Bit]): List[Char] = {
+    tree match {
+      case Leaf(char, weight) if (bits.isEmpty) => List(char)
+      case Fork(left, right, chars, weight) if (bits.isEmpty) => chars
+      case Fork(left, right, chars, weight) if (bits.head == 0) => {
+        println("-----     bits.head", bits.head, "     left", left, "     right", right)
+        decode(left, bits.tail)
+      }
+      case Fork(left, right, chars, weight) if (bits.head == 1) => {
+        println("-----     bits.head", bits.head, "     left", left, "     right", right)
+        decode(right, bits.tail)
+      }
+    }
+  }
 
   /**
    * A Huffman coding tree for the French language.
