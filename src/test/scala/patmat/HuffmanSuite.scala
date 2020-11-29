@@ -97,28 +97,28 @@ class HuffmanSuite {
     val t11 = Leaf('a',2)
     val t12 = Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5)
     val t13 = Fork(Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5), Leaf('d',4), List('a','b','d'), 9)
-    decode(t11, List())        // a
-    decode(t12, List(0))       // a
-    decode(t12, List(1))       // b
-    decode(t12, List())        // ab
-    decode(t13, List(0, 0))    // a
-    decode(t13, List(0, 1))    // b
-    decode(t13, List(1))       // d
-    decode(t13, List(0))       // ab
-    decode(t13, List())        // abd
-    decode(frenchCode, secretH)
-    decode(frenchCode, secretU)
-    decode(frenchCode, secretF)
-    decode(frenchCode, secretM)
-    decode(frenchCode, secretA)
-    decode(frenchCode, secretN)
-    decode(frenchCode, secretE)
-    decode(frenchCode, secretS)
-    decode(frenchCode, secretT)
-    decode(frenchCode, secretC)
-    decode(frenchCode, secretO)
-    decode(frenchCode, secretL)
-    decode(frenchCode, secret)
+    println(decode(t11, List()))        // a
+    println(decode(t12, List(0)))       // a
+    println(decode(t12, List(1)))       // b
+    println(decode(t12, List()))        // ab
+    println(decode(t13, List(0, 0)))    // a
+    println(decode(t13, List(0, 1)))    // b
+    println(decode(t13, List(1)))       // d
+    println(decode(t13, List(0)))       // ab
+    println(decode(t13, List()))        // abd
+    println(decode(frenchCode, secretH))
+    println(decode(frenchCode, secretU))
+    println(decode(frenchCode, secretF))
+    println(decode(frenchCode, secretM))
+    println(decode(frenchCode, secretA))
+    println(decode(frenchCode, secretN))
+    println(decode(frenchCode, secretE))
+    println(decode(frenchCode, secretS))
+    println(decode(frenchCode, secretT))
+    println(decode(frenchCode, secretC))
+    println(decode(frenchCode, secretO))
+    println(decode(frenchCode, secretL))
+    println(decode(frenchCode, secret))
   }
 
   @Test def `decode and encode a very short text should be identity (10pts)`: Unit =
