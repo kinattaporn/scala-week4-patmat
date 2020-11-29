@@ -7,6 +7,11 @@ class HuffmanSuite {
   import Huffman._
 
   trait TestTrees {
+    // t0        t1              t2
+    //                           abd
+    //           ab           ab     d
+    //  a      a    b       a    b
+    val t0 = Leaf('a', 2)
     val t1 = Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5)
     val t2 = Fork(Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5), Leaf('d',4), List('a','b','d'), 9)
   }
@@ -90,35 +95,45 @@ class HuffmanSuite {
   }
 
   @Test def `decode_test`: Unit = {
-// t11      t12              t13
-//                           abd
-//           ab           ab     d
-//  a      a    b       a    b
-    val t11 = Leaf('a',2)
-    val t12 = Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5)
-    val t13 = Fork(Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5), Leaf('d',4), List('a','b','d'), 9)
-    println(decode(t11, List()))        // a
-    println(decode(t12, List(0)))       // a
-    println(decode(t12, List(1)))       // b
-    println(decode(t12, List()))        // ab
-    println(decode(t13, List(0, 0)))    // a
-    println(decode(t13, List(0, 1)))    // b
-    println(decode(t13, List(1)))       // d
-    println(decode(t13, List(0)))       // ab
-    println(decode(t13, List()))        // abd
-    println(decode(frenchCode, secretH))
-    println(decode(frenchCode, secretU))
-    println(decode(frenchCode, secretF))
-    println(decode(frenchCode, secretM))
-    println(decode(frenchCode, secretA))
-    println(decode(frenchCode, secretN))
-    println(decode(frenchCode, secretE))
-    println(decode(frenchCode, secretS))
-    println(decode(frenchCode, secretT))
-    println(decode(frenchCode, secretC))
-    println(decode(frenchCode, secretO))
-    println(decode(frenchCode, secretL))
-    println(decode(frenchCode, secret))
+    new TestTrees {
+      println(decode(t0, List()))     // a
+      println(decode(t1, List(0)))    // a
+      println(decode(t1, List(1)))    // b
+      println(decode(t1, List()))     // ab
+      println(decode(t2, List(0, 0))) // a
+      println(decode(t2, List(0, 1))) // b
+      println(decode(t2, List(1)))    // d
+      println(decode(t2, List(0)))    // ab
+      println(decode(t2, List()))     // abd
+      println(decode(frenchCode, secretH))
+      println(decode(frenchCode, secretU))
+      println(decode(frenchCode, secretF))
+      println(decode(frenchCode, secretM))
+      println(decode(frenchCode, secretA))
+      println(decode(frenchCode, secretN))
+      println(decode(frenchCode, secretE))
+      println(decode(frenchCode, secretS))
+      println(decode(frenchCode, secretT))
+      println(decode(frenchCode, secretC))
+      println(decode(frenchCode, secretO))
+      println(decode(frenchCode, secretL))
+      println(decode(frenchCode, secret))
+    }
+  }
+
+  @Test def `encode_test`: Unit = {
+    new TestTrees {
+      println(encode(t0)(List('a')))            // List()
+      println(encode(t1)(List('a')))            // List(0)
+      println(encode(t1)(List('b')))            // List(1)
+      println(encode(t1)(List('a', 'b')))       // List(0, 1)
+      println(encode(t2)(List('a')))            // List(0, 0)
+      println(encode(t2)(List('b')))            // List(0, 1)
+      println(encode(t2)(List('d')))            // List(1)
+      println(encode(t2)(List('a', 'b')))       // List(0, 0, 0, 1)
+      println(encode(t2)(List('a', 'b', 'd')))  // List(0, 0, 0, 1, 1)
+      println(encode(frenchCode)(List('h', 'u', 'f', 'f', 'm', 'a', 'n', 'e', 's', 't', 'c', 'o', 'o', 'l')))
+    }
   }
 
   @Test def `decode and encode a very short text should be identity (10pts)`: Unit =

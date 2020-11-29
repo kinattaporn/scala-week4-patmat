@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7689412f-29c2-4fa0-a882-d48d6be5dbdd" name="Default Changelist" comment="">
+    <list default="true" id="7689412f-29c2-4fa0-a882-d48d6be5dbdd" name="Default Changelist" comment="Added decodedSecret">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/patmat/Huffman.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/patmat/Huffman.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/patmat/HuffmanSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/patmat/HuffmanSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/patmat/Huffman$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/patmat/Huffman$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/patmat/Huffman.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/patmat/Huffman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite$$anon$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite$$anon$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite$$anon$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite$$anon$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite$$anon$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite$$anon$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite$$anon$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite$$anon$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite$TestTrees.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite$TestTrees.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +45,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="JUnit.HuffmanSuite.decode_test">
+  <component name="RunManager" selected="JUnit.HuffmanSuite.encode_test">
     <configuration name="HuffmanSuite.createCodeTree_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="progfun1-patmat" />
       <extension name="coverage">
@@ -86,7 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HuffmanSuite.singleton_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HuffmanSuite.encode_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="progfun1-patmat" />
       <extension name="coverage">
         <pattern>
@@ -96,7 +104,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="patmat" />
       <option name="MAIN_CLASS_NAME" value="patmat.HuffmanSuite" />
-      <option name="METHOD_NAME" value="singleton_test" />
+      <option name="METHOD_NAME" value="encode_test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HuffmanSuite.encode_test" />
         <item itemvalue="JUnit.HuffmanSuite.decode_test" />
         <item itemvalue="JUnit.HuffmanSuite.decode$u0020and$u0020encode$u0020a$u0020very$u0020short$u0020text$u0020should$u0020be$u0020identity$u0020$u002810pts$u0029" />
         <item itemvalue="JUnit.HuffmanSuite.createCodeTree_test" />
         <item itemvalue="JUnit.HuffmanSuite.until_test" />
-        <item itemvalue="JUnit.HuffmanSuite.singleton_test" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606617604793</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added decodedSecret">
+      <created>1606680569136</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606680569136</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -216,29 +231,29 @@
       <screen x="0" y="23" width="1440" height="873" />
     </state>
     <state x="522" y="232" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.873@0.23.1440.873" timestamp="1606615600168" />
-    <state x="157" y="60" width="1170" height="798" key="CommitChangelistDialog2" timestamp="1606617604312">
+    <state x="157" y="60" width="1170" height="798" key="CommitChangelistDialog2" timestamp="1606681759974">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state x="157" y="60" width="1170" height="798" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1606617604312" />
-    <state width="1269" height="229" key="GridCell.Tab.0.bottom" timestamp="1606680445403">
+    <state x="157" y="60" width="1170" height="798" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1606681759974" />
+    <state width="1269" height="229" key="GridCell.Tab.0.bottom" timestamp="1606684186878">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1606680445403" />
-    <state width="1269" height="229" key="GridCell.Tab.0.center" timestamp="1606680445403">
+    <state width="1269" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1606684186878" />
+    <state width="1269" height="229" key="GridCell.Tab.0.center" timestamp="1606684186877">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1606680445403" />
-    <state width="1269" height="229" key="GridCell.Tab.0.left" timestamp="1606680445402">
+    <state width="1269" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1606684186877" />
+    <state width="1269" height="229" key="GridCell.Tab.0.left" timestamp="1606684186876">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1606680445402" />
-    <state width="1269" height="229" key="GridCell.Tab.0.right" timestamp="1606680445403">
+    <state width="1269" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1606684186876" />
+    <state width="1269" height="229" key="GridCell.Tab.0.right" timestamp="1606684186877">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1606680445403" />
-    <state x="384" y="199" key="Vcs.Push.Dialog.v2" timestamp="1606617606718">
+    <state width="1269" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1606684186877" />
+    <state x="384" y="199" key="Vcs.Push.Dialog.v2" timestamp="1606680571147">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state x="384" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.873@0.23.1440.873" timestamp="1606617606718" />
+    <state x="384" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.873@0.23.1440.873" timestamp="1606680571147" />
   </component>
 </project>
