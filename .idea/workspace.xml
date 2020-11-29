@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7689412f-29c2-4fa0-a882-d48d6be5dbdd" name="Default Changelist" comment="Added decode">
+    <list default="true" id="7689412f-29c2-4fa0-a882-d48d6be5dbdd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/patmat/Huffman.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/patmat/Huffman.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/patmat/HuffmanSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/patmat/HuffmanSuite.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/patmat/Huffman$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/patmat/Huffman$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/patmat/Huffman.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/patmat/Huffman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite$$anon$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite$$anon$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/patmat/HuffmanSuite.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,37 +191,49 @@
       <option name="project" value="LOCAL" />
       <updated>1606095477437</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added decodedSecret">
+      <created>1606528714104</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606528714104</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added decode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added decode" />
+    <MESSAGE value="Added decodedSecret" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added decodedSecret" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="157" y="60" width="1170" height="798" key="CommitChangelistDialog2" timestamp="1606525149188">
+    <state x="522" y="232" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1606615600168">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state x="157" y="60" width="1170" height="798" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1606525149188" />
-    <state width="1269" height="229" key="GridCell.Tab.0.bottom" timestamp="1606528627892">
+    <state x="522" y="232" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.873@0.23.1440.873" timestamp="1606615600168" />
+    <state x="157" y="60" width="1170" height="798" key="CommitChangelistDialog2" timestamp="1606528713641">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1606528627892" />
-    <state width="1269" height="229" key="GridCell.Tab.0.center" timestamp="1606528627882">
+    <state x="157" y="60" width="1170" height="798" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1606528713641" />
+    <state width="1269" height="229" key="GridCell.Tab.0.bottom" timestamp="1606617463321">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1606528627882" />
-    <state width="1269" height="229" key="GridCell.Tab.0.left" timestamp="1606528627881">
+    <state width="1269" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1606617463321" />
+    <state width="1269" height="229" key="GridCell.Tab.0.center" timestamp="1606617463320">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1606528627881" />
-    <state width="1269" height="229" key="GridCell.Tab.0.right" timestamp="1606528627882">
+    <state width="1269" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1606617463320" />
+    <state width="1269" height="229" key="GridCell.Tab.0.left" timestamp="1606617463320">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1606528627882" />
-    <state x="384" y="199" key="Vcs.Push.Dialog.v2" timestamp="1606095479495">
+    <state width="1269" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1606617463320" />
+    <state width="1269" height="229" key="GridCell.Tab.0.right" timestamp="1606617463321">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state x="384" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.873@0.23.1440.873" timestamp="1606095479495" />
+    <state width="1269" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1606617463321" />
+    <state x="384" y="199" key="Vcs.Push.Dialog.v2" timestamp="1606528716154">
+      <screen x="0" y="23" width="1440" height="873" />
+    </state>
+    <state x="384" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.873@0.23.1440.873" timestamp="1606528716154" />
   </component>
 </project>

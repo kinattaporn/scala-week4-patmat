@@ -140,18 +140,30 @@ trait Huffman extends HuffmanInterface {
    * the resulting list of characters.
    */
   def decode(tree: CodeTree, bits: List[Bit]): List[Char] = {
-    tree match {
-      case Leaf(char, weight) if (bits.isEmpty) => List(char)
-      case Fork(left, right, chars, weight) if (bits.isEmpty) => chars
+    def decodeChar(subTree: CodeTree, bits: List[Bit]): List[Char] = subTree match {
+      case Leaf(char, weight) if (bits.isEmpty) => {
+        println(char)
+        List(char)
+      }
+      case Leaf(char, weight) => {
+        println(char)
+        println("-----     bits.head", bits.head, "     tree", tree)
+        char :: decodeChar(tree, bits)
+      }
+      case Fork(left, right, chars, weight) if (bits.isEmpty) => {
+        println(chars)
+        chars
+      }
       case Fork(left, right, chars, weight) if (bits.head == 0) => {
-        println("-----     bits.head", bits.head, "     left", left, "     right", right)
-        decode(left, bits.tail)
+        println("-----     bits.head", bits.head, "     left", left)
+        decodeChar(left, bits.tail)
       }
       case Fork(left, right, chars, weight) if (bits.head == 1) => {
-        println("-----     bits.head", bits.head, "     left", left, "     right", right)
-        decode(right, bits.tail)
+        println("-----     bits.head", bits.head, "     right", right)
+        decodeChar(right, bits.tail)
       }
     }
+    decodeChar(tree, bits)
   }
 
   /**
@@ -219,20 +231,20 @@ trait Huffman extends HuffmanInterface {
    * What does the secret message say? Can you decode it?
    * For the decoding use the `frenchCode' Huffman tree defined above.
    */
-  val secret: List[Bit] = List(0,0,1,1,1,0,1
-    ,0,1,1,1
-    ,0,0,1,1,0,1
-    ,0,0,1,1,0,1
-    ,0,1,1,0,0
-    ,1,1,1,1
-    ,1,0,1,0
-    ,1,1,0
-    ,0,0,0
-    ,1,0,1,1
-    ,1,0,0,1,0
-    ,0,1,0,0
-    ,0,1,0,0
-    ,0,1,0,1)
+  val secret: List[Bit] = List(0,0,1,1,1,0,1  // h
+    ,0,1,1,1                                  // u
+    ,0,0,1,1,0,1                              // f
+    ,0,0,1,1,0,1                              // f
+    ,0,1,1,0,0                                // m
+    ,1,1,1,1                                  // a
+    ,1,0,1,0                                  // n
+    ,1,1,0                                    // e
+    ,0,0,0                                    // s
+    ,1,0,1,1                                  // t
+    ,1,0,0,1,0                                // c
+    ,0,1,0,0                                  // o
+    ,0,1,0,0                                  // o
+    ,0,1,0,1)                                 // l
   val secretH: List[Bit] = List(0,0,1,1,1,0,1)
   val secretU: List[Bit] = List(0,1,1,1)
   val secretF: List[Bit] = List(0,0,1,1,0,1)
