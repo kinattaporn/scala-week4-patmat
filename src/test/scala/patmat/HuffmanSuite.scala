@@ -138,9 +138,47 @@ class HuffmanSuite {
 
   @Test def `decode and encode a very short text should be identity (10pts)`: Unit =
     new TestTrees {
+      println(encode(t1)("ab".toList))
+      println(decode(t1, encode(t1)("ab".toList)))
       assertEquals("ab".toList, decode(t1, encode(t1)("ab".toList)))
     }
 
+  @Test def `codeBits_test`: Unit = {
+    new TestTrees {
+      println(codeBits(List(('a', List())))('a'))
+      println(codeBits(List(('a', List(0)), ('b', List(1))))('a'))
+      println(codeBits(List(('a', List(0)), ('b', List(1))))('b'))
+      println(codeBits(List(('a', List(0, 0)), ('b', List(0, 1)), ('d', List(1))))('a'))
+      println(codeBits(List(('a', List(0, 0)), ('b', List(0, 1)), ('d', List(1))))('b'))
+      println(codeBits(List(('a', List(0, 0)), ('b', List(0, 1)), ('d', List(1))))('d'))
+      println(codeBits(List(('h', List(0, 0, 1, 1, 1, 0, 1))))('h'))
+    }
+  }
+
+  @Test def `convert_mergeCodeTables_test`: Unit = {
+    new TestTrees {
+      println(convert(t0))
+      println(convert(t1))
+      println(convert(t2))
+      println(convert(frenchCode))
+      println(mergeCodeTables(convert(t0), convert(t1)))
+    }
+  }
+
+  @Test def `quickEncode_test`: Unit = {
+    new TestTrees {
+      println(quickEncode(t0)(List('a')))            // List()
+      println(quickEncode(t1)(List('a')))            // List(0)
+      println(quickEncode(t1)(List('b')))            // List(1)
+      println(quickEncode(t1)(List('a', 'b')))       // List(0, 1)
+      println(quickEncode(t2)(List('a')))            // List(0, 0)
+      println(quickEncode(t2)(List('b')))            // List(0, 1)
+      println(quickEncode(t2)(List('d')))            // List(1)
+      println(quickEncode(t2)(List('a', 'b')))       // List(0, 0, 0, 1)
+      println(quickEncode(t2)(List('a', 'b', 'd')))  // List(0, 0, 0, 1, 1)
+      println(quickEncode(frenchCode)(List('h', 'u', 'f', 'f', 'm', 'a', 'n', 'e', 's', 't', 'c', 'o', 'o', 'l')))
+    }
+  }
 
   @Rule def individualTestTimeout = new org.junit.rules.Timeout(10 * 1000)
 }
